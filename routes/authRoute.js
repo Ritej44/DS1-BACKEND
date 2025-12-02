@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 //les endpoint mawjoudin fl controller
-const { register, login, logout } = require('../controllers/authController');
+const { register, login, logout } = require('../controllers/authController.js');
 
 // Endpoints ll authentification
 router.post('/register', register);

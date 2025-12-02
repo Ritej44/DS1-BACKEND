@@ -4,7 +4,7 @@ const {
   getUserById,    // jib utilisateur b id
   deleteUser,     // fsekh utilisateur
   updateUser,     // 3addel utilisateur
-} = require('../controllers/userController');
+} = require('../controllers/userController.js');
 const { authenticateToken, isManager } = require('../middlewares/authMiddleware'); // middlewares ta3 l'authentification
 const router = express.Router();
 
