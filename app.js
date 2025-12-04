@@ -31,7 +31,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 //  middleware ykhali Express  yakra l cookies l tba3thou ml navigateur.
 app.use(cookieParser());
-
+// atineh userroute o authroute bch nekhdmou bihom
 app.use('/user',userRoute);
 app.use('/auth', authRoute);
  
@@ -45,7 +45,9 @@ const connect = async () => {
     process.exit(1);
   }
 };
+//connect teb3a l mongo
 connect();
+//hnee bch naiw ll api enehou el port l bch yekhdm bih declarineh lfouk o jebneh m env
 app.listen(PORT, () => {
     console.log(`Serveur lancé sur http://localhost:${PORT}`);
 });

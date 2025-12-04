@@ -11,10 +11,10 @@ const userSchema = new mongoose.Schema({
 });
 
 // kbal save ncryptiw l mot de passe
-userSchema.pre('save', async function(next) {
-  if (!this.isModified('motDePasse')) return next();
+userSchema.pre('save', async function() {
+  if (!this.isModified('motDePasse')) return ;
   this.motDePasse = await bcrypt.hash(this.motDePasse, 10);
-  next();
+  
 });
 
 // n9arnou les mots de passe kifkif walee
