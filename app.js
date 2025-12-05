@@ -7,6 +7,8 @@ require('dotenv').config();
 //importina les routes handler
 const userRoute= require('./routes/userRoute');
 const authRoute = require('./routes/authroute')
+const projectRoute = require('./routes/projectRoute')
+
 //hedha variable port l jebneh m env
 const PORT = process.env.PORT;
 
@@ -34,7 +36,7 @@ app.use(cookieParser());
 // atineh userroute o authroute bch nekhdmou bihom
 app.use('/user',userRoute);
 app.use('/auth', authRoute);
- 
+app.use('/project',projectRoute) 
 // CONNEXION ll MongoDB
 const connect = async () => {
   try {
