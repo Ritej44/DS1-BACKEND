@@ -8,6 +8,7 @@ require('dotenv').config();
 const userRoute= require('./routes/userRoute');
 const authRoute = require('./routes/authroute')
 const projectRoute = require('./routes/projectRoute')
+const taskRoute = require('./routes/taskRoute')//hne ndeclariw el route o louta natiw l endpoint l bch naytoulha bih
 
 //hedha variable port l jebneh m env
 const PORT = process.env.PORT;
@@ -36,7 +37,8 @@ app.use(cookieParser());
 // atineh userroute o authroute bch nekhdmou bihom
 app.use('/user',userRoute);
 app.use('/auth', authRoute);
-app.use('/project',projectRoute) 
+app.use('/project',projectRoute) ;
+app.use('/task',taskRoute);//kol mara nzidou les endpoints bch ntestiw bihom o ywaliw yfonctionniw f api
 // CONNEXION ll MongoDB
 const connect = async () => {
   try {
